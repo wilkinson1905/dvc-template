@@ -49,7 +49,7 @@ train_y = train_df['Survived']
 # You can experiment with many other options here, using the same .fit() and .predict()
 # methods; see http://scikit-learn.org
 # This example uses the current build of XGBoost, from https://github.com/dmlc/xgboost
-gbm = xgb.XGBClassifier(max_depth=3, n_estimators=300, learning_rate=0.05).fit(train_X, train_y)
+gbm = xgb.XGBClassifier(max_depth=4, n_estimators=300, learning_rate=0.05).fit(train_X, train_y)
 predictions = gbm.predict(test_X)
 
 # Kaggle needs the submission to have a certain format;
